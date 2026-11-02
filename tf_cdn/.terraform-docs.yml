@@ -1,0 +1,22 @@
+# Format file to autogenerate README.md
+# Usage (from the tf_cdn/ folder): terraform-docs .
+# Regenerates the module tables in the root README.md between the BEGIN_TF_DOCS / END_TF_DOCS markers.
+
+version: ""
+
+formatter: "markdown"
+
+settings:
+  lockfile: false # report only provider versions declared in code, not the local lock file
+
+sort:
+  enabled: true
+  by: required # required inputs first
+
+output:
+  file: "../README.md"
+  mode: inject
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->

@@ -1,0 +1,8 @@
+# Copy to terraform.tfvars (gitignored) in this folder and set your values.
+
+# Must exactly match the group name in Akamai Control Center ("Luna", control.akamai.com).
+group_name = "Example Group Name"
+
+# DataStream S3 destination credentials (sensitive). Never commit real values.
+datastream_s3_access_key = "REPLACE_ME"
+datastream_s3_secret_key = "REPLACE_ME"

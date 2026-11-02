@@ -1,0 +1,3 @@
+# Minimum supported Terraform version. Keep in sync with .terraform-version
+# and required_version in the versions.tf files.
+terraform 1.3.10

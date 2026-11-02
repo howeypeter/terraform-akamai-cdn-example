@@ -1,0 +1,4 @@
+# Copy to terraform.tfvars (gitignored) in this folder and set your values.
+
+# Must exactly match the group name in Akamai Control Center ("Luna", control.akamai.com).
+group_name = "Example Group Name"

@@ -1,0 +1,28 @@
+# Akamai EdgeGrid credentials: example file with placeholder values.
+#
+# 1. Create an API client in Akamai Control Center:
+#    Identity & Access Management > API clients > Create API client.
+#    Grant it access to the APIs this repo uses (Property Manager, CP Codes,
+#    DataStream, Client Lists, Network Lists).
+# 2. Copy this file to your home directory as ~/.edgerc and replace the values
+#    with the credentials from your API client.
+# 3. Restrict permissions: chmod 600 ~/.edgerc
+#
+# Never commit a real .edgerc. In CI, set the AKAMAI_HOST, AKAMAI_CLIENT_TOKEN,
+# AKAMAI_CLIENT_SECRET and AKAMAI_ACCESS_TOKEN environment variables instead.
+#
+# By default the Terraform provider reads the [default] section of ~/.edgerc.
+# To use a different file or section:
+#
+#   provider "akamai" {
+#     edgerc         = "~/.edgerc"
+#     config_section = "default"
+#   }
+
+[default]
+client_secret = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+host          = akab-xxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxx.luna.akamaiapis.net
+access_token  = akab-xxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxx
+client_token  = akab-xxxxxxxxxxxxxxxx-xxxxxxxxxxxxxxxx
+# Optional: only needed if your API client manages multiple accounts.
+# account_key = X-X-XXXXXXX:X-XXXXXXX

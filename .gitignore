@@ -1,0 +1,36 @@
+# Sorted alphabetically (C locale). Negation rules must stay at the bottom so they override earlier patterns.
+
+**/.git/
+**/.terraform.lock.hcl
+**/.terraform/
+*.edgerc
+*.key
+*.pem
+*.tfplan
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*_override.tf
+*_override.tf.json
+.DS_Store
+.claude/
+.edgerc
+.edgerc.*
+.env
+.env.*
+.idea/
+.project
+.terraform.tfstate.lock.info
+.terraformrc
+.vscode/
+Thumbs.db
+crash.*.log
+crash.log
+override.tf
+override.tf.json
+terraform.rc
+tfplan
+
+# Re-include the placeholder credentials file
+!.edgerc.example
